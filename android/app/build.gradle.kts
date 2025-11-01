@@ -1,13 +1,13 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    id("dev.flutter.flutter-gradle-plugin")
+    kotlin("android")
+    id("dev.flutter.flutter-gradle-plugin") version "0.1.15"
 }
 
 android {
     namespace = "com.example.gasmonitoringsys"
     compileSdk = 34
-    ndkVersion = "27.0.12077973" // Optional, match your project NDK
+    ndkVersion = "27.0.12077973" // Match your project NDK version if required
 
     defaultConfig {
         applicationId = "com.example.gasmonitoringsys"
@@ -23,7 +23,7 @@ android {
         }
     }
 
-    // Java 11 + desugaring
+    // Java 11 + core library desugaring
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -36,6 +36,7 @@ android {
 }
 
 flutter {
+    // Flutter project root relative to android/app
     source = "../.."
 }
 
