@@ -1,0 +1,27 @@
+name: smart_lpg_monitor
+description: Smart LPG Monitor app with BLE, analytics and anomaly detection
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_blue_plus: ^1.8.0  
+  fl_chart: ^0.68.0
+  sqflite: ^2.2.8+4
+  path_provider: ^2.0.14
+  shared_preferences: ^2.1.1
+  flutter_local_notifications: ^17.0.0
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    #- assets/logo.png
