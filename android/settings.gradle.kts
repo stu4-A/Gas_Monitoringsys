@@ -1,3 +1,4 @@
+// android/settings.gradle.kts
 pluginManagement {
     repositories {
         gradlePluginPortal()
