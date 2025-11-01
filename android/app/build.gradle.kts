@@ -10,7 +10,7 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
-    //  Enable Java 11 + desugaring support
+    // ✅ Enable Java 11 + desugaring support
     compileOptions {
         coreLibraryDesugaringEnabled true // <-- Added
         sourceCompatibility = JavaVersion.VERSION_11
@@ -41,7 +41,7 @@ flutter {
 }
 
 dependencies {
-    //  Add this line for core library desugaring
+    // ✅ Add this line for core library desugaring
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 
     // Kotlin standard library
