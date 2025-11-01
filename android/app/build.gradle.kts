@@ -1,13 +1,14 @@
+// android/app/build.gradle.kts
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("dev.flutter.flutter-gradle-plugin") // ✅ version removed
+    id("dev.flutter.flutter-gradle-plugin") // ✅ no version
 }
 
 android {
     namespace = "com.example.gasmonitoringsys"
     compileSdk = 34
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "27.0.12077973" // optional, only if you use NDK
 
     defaultConfig {
         applicationId = "com.example.gasmonitoringsys"
@@ -23,6 +24,7 @@ android {
         }
     }
 
+    // Java 11 + core library desugaring for flutter_local_notifications
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
